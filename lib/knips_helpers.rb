@@ -1,5 +1,5 @@
 require "knips_helpers/version"
-require "knips_helpers/railtie"
+require "knips_helpers/engine"
 
 require "validators/email_validator"
 

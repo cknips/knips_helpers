@@ -1,5 +1,5 @@
 module KnipsHelpers
-  class Railtie < Rails::Railtie
+  class Engine < ::Rails::Engine
     initializer "knips_helpers.initialize" do
       
     end
