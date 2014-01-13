@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Tilo Dietrich", "Alexander Huber"]
   spec.email         = ["tilo.dietrich@knips.konsorten.de",
                         "alexander.huber@knips-konsorten.de"]
-  spec.description   = %q{TODO: Write a gem description}
+  spec.description   = %q{there is no description}
   spec.summary       = %q{Some helper methods shared between projects}
   spec.homepage      = ""
   spec.license       = "MIT"
