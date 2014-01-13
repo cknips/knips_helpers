@@ -1,0 +1,5 @@
+de:
+  activerecord:
+    errors:
+      messages:
+        not_an_email: ist keine gültige E-Mail-Adresse
