@@ -1,5 +1,8 @@
 de:
-  activerecord:
+  activerecord: &error_messages
     errors:
       messages:
-        not_an_email: ist keine gültige E-Mail-Adresse
+        not_an_email: E-Mail-Adresse ist ungültig
+        not_a_url: URL ist ungültig
+        not_a_zip: PLZ ist ungültig
+  activemodel: *error_messages
