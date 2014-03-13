@@ -1,10 +1,11 @@
 class UrlValidator < ActiveModel::EachValidator
-  PROTOCOL       = /(?:(?:http|https)\:\/\/)?/
-  DOMAIN         = /([a-z0-9\-]+\.?)*([a-z0-9]{2,})\.[a-z]{2,}/
-  PORT           = /(([:]\d+)?)/
-  PATH_AND_QUERY = /\/?[a-zA-Z0-9\-\._\?\,\'\/\\\+&%\$#\=~]*[^\.\,\s]/
-
-  URL_REGEX      = /\A#{PROTOCOL}#{DOMAIN}#{PORT}#{PATH_AND_QUERY}\z/
+  URL_REGEX =
+    /\A
+    (?:https?\:\/\/)?                                       # protocol
+    (?:[a-z0-9\-]+\.?)*[a-z0-9]{2,}\.[a-z]{2,}              # domain
+    (?:[:]\d+)?                                             # port
+    (?:\/[a-zA-Z0-9\-\._\?\,\'\/\+&%\$#\=~]*)?              # path and query
+    \z/x
 
 
   def validate_each(record, attribute, value)
