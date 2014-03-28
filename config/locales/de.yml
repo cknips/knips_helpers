@@ -5,4 +5,5 @@ de:
         not_an_email: E-Mail-Adresse ist ungültig
         not_a_url: URL ist ungültig
         not_a_zip: PLZ ist ungültig
+        not_an_iban: IBAN ist ungültig
   activemodel: *error_messages
