@@ -1,0 +1,16 @@
+@mixin arrow-right($size, $color) {
+  position: relative;
+
+  &:after {
+    width: 0;
+    height: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    border-top: $size solid transparent;
+    border-bottom: $size solid transparent;
+    border-left: $size solid $color;
+    top: 50%;
+    right: -$size;
+    margin-top: -$size;
+  }
