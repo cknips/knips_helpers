@@ -1,5 +1,6 @@
 class IbanValidator < ActiveModel::EachValidator
   def validate_each(record, attribute, value)
+    return if value == nil
     return if options[:allow_blank] && value.blank?
 
     value.gsub!(/\s+/, "")
