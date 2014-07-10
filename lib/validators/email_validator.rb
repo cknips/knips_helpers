@@ -1,6 +1,6 @@
 class EmailValidator < ActiveModel::EachValidator
-  EMAIL_REGEX = /\A([\w\-\.\+]+)@((?:[\-a-z0-9]+\.)+[a-z]{2,})\z/i
-  
+  EMAIL_REGEX = /\A([\wÄÖÜäöüß\-\.\+]+)@((?:[\-a-z0-9äöüß]+\.)+[a-z]{2,})\z/i
+
   def validate_each(record, attribute, value)
     return if options[:allow_blank] && value.blank?
 
