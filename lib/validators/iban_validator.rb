@@ -6,6 +6,7 @@ class IbanValidator < ActiveModel::EachValidator
     if value.length != 22
       record.errors[attribute] <<
         (options[:message] || I18n.t("activerecord.errors.messages.not_an_iban"))
+      return
     end
 
     value.gsub!(/\s+/, "")
