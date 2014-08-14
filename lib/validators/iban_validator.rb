@@ -3,15 +3,9 @@ class IbanValidator < ActiveModel::EachValidator
     return if value == nil
     return if options[:allow_blank] && value.blank?
 
-    value.gsub!(/\s+/, "")
+    value.gsub!(/[^DE\d{20}]/, "")
 
     if value.length != 22
-      record.errors[attribute] <<
-        (options[:message] || I18n.t("activerecord.errors.messages.not_an_iban"))
-      return
-    end
-
-    unless /DE\d{20}/.match(value)
       record.errors[attribute] <<
         (options[:message] || I18n.t("activerecord.errors.messages.not_an_iban"))
       return
